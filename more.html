@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function alertComingSoon(a){
+            alert("The game on "+a+" is coming soon. Visit our official site at http://binbell.com and follow us on Twitter, Facebook, Google+ to get more info about all our upcoming titles")
+        }
+        function go_iOS() {
+            //alertComingSoon("iOS");
+            window.location = "https://itunes.apple.com/us/developer/xuan-thang-nguyen/id1205844457";
+
+        }
+
+        function go_Android() {
+            //alertComingSoon("Android");
+            window.location = "https://play.google.com/store/apps/details?id=com.sundayapp.game.strange.snake";
+        }
+
+        function go_Wp8() {
+            alertComingSoon("Windows Phone");
+            //window.location = "https://www.microsoft.com/store/apps/9nblggh68plz";
+        }
+        if(		navigator.userAgent.match(/Android/i))
+            go_Android();
+        else if(navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i))
+            go_iOS();
+        else if(navigator.userAgent.match(/Windows Phone/i))
+            go_Wp8();
+    </script>
+</head>
+</html>
